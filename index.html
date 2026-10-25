@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Examples of the CSS overflow values: visible, hidden, auto and scroll." />
+    <title>Overflow Examples</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>CSS Overflow</h1>
+      <p>Every box below has the same fixed height of 120px and the same long text. Only <code>overflow</code> changes.</p>
+    </header>
+
+    <main>
+      <section class="grid">
+        <article>
+          <h2><code>overflow: visible</code></h2>
+          <p class="hint">Default. Extra text spills outside the box and may cover what is below.</p>
+          <div class="box visible">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
+          </div>
+        </article>
+
+        <article>
+          <h2><code>overflow: hidden</code></h2>
+          <p class="hint">Extra text is cut off and cannot be reached.</p>
+          <div class="box hidden">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
+          </div>
+        </article>
+
+        <article>
+          <h2><code>overflow: scroll</code></h2>
+          <p class="hint">Scrollbars are always shown, even when they are not needed.</p>
+          <div class="box scroll">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
+          </div>
+        </article>
+
+        <article>
+          <h2><code>overflow: auto</code></h2>
+          <p class="hint">Scrollbar appears only when the content is too big.</p>
+          <div class="box auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
+          </div>
+        </article>
+      </section>
+
+      <!-- ===== Second container: overflow auto used as a scrollable content box ===== -->
+      <section>
+        <h2>Scrollable content box (<code>overflow: auto</code>)</h2>
+        <p class="hint">A practical use: a fixed-height message list or terms box.</p>
+        <div class="scroll-panel" tabindex="0" aria-label="Scrollable course updates">
+          <h3>Course Updates</h3>
+          <ul>
+            <li>Week 1: Introduction to the web and HTML basics.</li>
+            <li>Week 2: Headings, links, images and lists.</li>
+            <li>Week 3: Tables and forms.</li>
+            <li>Week 4: Semantic HTML and page metadata.</li>
+            <li>Week 5: CSS selectors, variables and typography.</li>
+            <li>Week 6: The box model, display and overflow.</li>
+            <li>Week 7: Flexbox layouts.</li>
+            <li>Week 8: Grid layouts and responsive design.</li>
+            <li>Week 9: Mini-project work.</li>
+            <li>Week 10: Final review and presentation.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===== Fixing overflow in a sample page ===== -->
+      <section>
+        <h2>Fixing an overflow issue</h2>
+        <p>
+          <a href="broken.html">Before: page with overflow problems</a> &middot;
+          <a href="fixed.html">After: fixed page</a>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

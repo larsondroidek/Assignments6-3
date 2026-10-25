@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #1f2937;
+  background-color: #f3f4f6;
+  line-height: 1.5;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin: 0 0 4px;
+}
+
+.hint {
+  margin: 0 0 8px;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px 20px;
+  margin-bottom: 210px;  /* room below, so the spilled text of "visible" does not cover the next section */
+}
+
+/* ===== Shared fixed-size container ===== */
+.box {
+  height: 120px;                 /* fixed height -> content overflows */
+  padding: 10px;
+  font-size: 0.9rem;
+  background-color: #ffffff;
+  border: 2px solid #2563eb;
+  border-radius: 8px;
+}
+
+/* ===== The four overflow values ===== */
+.visible { overflow: visible; }   /* text spills out of the box */
+.hidden  { overflow: hidden;  }   /* text is clipped */
+.scroll  { overflow: scroll;  }   /* scrollbars always shown */
+.auto    { overflow: auto;    }   /* scrollbars only when needed */
+
+/* ===== Second container: scrollable panel ===== */
+.scroll-panel {
+  max-width: 420px;
+  height: 180px;
+  padding: 0 16px;
+  overflow: auto;                /* vertical scrollbar only appears because the list is long */
+  background-color: #ffffff;
+  border: 2px solid #16a34a;
+  border-radius: 8px;
+}
+
+.scroll-panel h3 {
+  position: sticky;              /* title stays visible while scrolling */
+  top: 0;
+  margin: 0;
+  padding: 8px 0;
+  background-color: #ffffff;
+}
+
+section {
+  margin-bottom: 32px;
+}
